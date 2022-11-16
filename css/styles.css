@@ -25,6 +25,10 @@ body{
   height: 60px;
 }
 
+.row{
+  margin: 0px;
+}
+
 .contenedorPrincipal{
   background-color: rgb(76, 97, 182);
   padding-top: 50px;
