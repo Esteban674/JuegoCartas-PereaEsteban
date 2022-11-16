@@ -239,7 +239,7 @@ dorsoCartaOculta.classList.add('contenedorCartas','justify-content-center');
 const crearDorsoCartaIzquierda = (publisher) => {
   dorsoCarta.innerHTML += `
         <div class="dorsoCarta positionIzq${contadorPosicionIzq}">
-          <img src="${publisher === 'DC Comics'? '../img/dorsoDC.png' : '../img/dorsoMarvel.jpg'}" alt="dorso carta" class="imagenDorsoCarta">
+          <img src="${publisher === 'DC Comics'? './img/dorsoDC.png' : './img/dorsoMarvel.jpg'}" alt="dorso carta" class="imagenDorsoCarta">
         </div>
   `
 };
@@ -247,7 +247,7 @@ const crearDorsoCartaIzquierda = (publisher) => {
 const crearDorsoCartaDerecha = (publisher) => {
   dorsoCartaDerecha.innerHTML += `
         <div class="dorsoCarta positionDer${contadorPosicionDer}"">
-          <img src="${publisher === 'DC Comics'? '../img/dorsoDC.png' : '../img/dorsoMarvel.jpg'}" alt="dorso carta" class="imagenDorsoCarta">
+          <img src="${publisher === 'DC Comics'? './img/dorsoDC.png' : './img/dorsoMarvel.jpg'}" alt="dorso carta" class="imagenDorsoCarta">
         </div>
   `
 };
@@ -255,7 +255,7 @@ const crearDorsoCartaDerecha = (publisher) => {
 const crearDorsoCartaOculta = (publisher) => {
   dorsoCartaOculta.innerHTML = `
         <div class="dorsoCarta dorsoCartaOculta">
-          <img src="${publisher === 'DC Comics'? '../img/dorsoDC.png' : '../img/dorsoMarvel.jpg'}" alt="dorso carta" class="imagenDorsoCarta">
+          <img src="${publisher === 'DC Comics'? './img/dorsoDC.png' : './img/dorsoMarvel.jpg'}" alt="dorso carta" class="imagenDorsoCarta">
         </div>
   `
 };
@@ -265,9 +265,9 @@ const crearCarta = async(id) => {
     carta.innerHTML += `
         <div class="carta animate__animated animate__fadeIn">
         <div class="d-flex justify-content-between align-items-center contenedorNombreCarta">
-          <img src="${heroe.biography.publisher == 'DC Comics'? '../img/dcLogoCarta.png':'../img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
+          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
           <p class="text-center nombreCarta">${heroe.name.toUpperCase()}</p> 
-          <img src="${heroe.biography.publisher == 'DC Comics'? '../img/dcLogoCarta.png':'../img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
+          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
         </div>
 
         <div>
@@ -534,9 +534,9 @@ const crearCartaDerecha = async(id) => {
     cartaDerecha.innerHTML += `
         <div class="carta animate__animated animate__flipInY">
         <div class="d-flex justify-content-between align-items-center contenedorNombreCarta">
-          <img src="${heroe.biography.publisher == 'DC Comics'? '../img/dcLogoCarta.png':'../img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
+          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
           <p class="text-center nombreCarta">${heroe.name.toUpperCase()}</p> 
-          <img src="${heroe.biography.publisher == 'DC Comics'? '../img/dcLogoCarta.png':'../img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
+          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
         </div>
 
         <div>
@@ -567,9 +567,9 @@ const crearCartas = async() => {
     cartas.innerHTML += `
         <div class="carta animate__animated animate__fadeIn">
         <div class="d-flex justify-content-between align-items-center contenedorNombreCarta">
-          <img src="${heroe.biography.publisher == 'DC Comics'? '../img/dcLogoCarta.png':'../img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
+          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
           <p class="text-center nombreCarta">${heroe.name.toUpperCase()}</p> 
-          <img src="${heroe.biography.publisher == 'DC Comics'? '../img/dcLogoCarta.png':'../img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
+          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
         </div>
 
         <div>
