@@ -1,0 +1,371 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+.containerLogo{
+  width: auto;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.dcLogo{
+  align-self: center;
+  height: 100%;
+}
+
+.vsLogo{
+  height: 60px;
+  align-self: center;
+}
+
+.marvelLogo{
+  align-self: center;
+  height: 60px;
+}
+
+.contenedorPrincipal{
+  background-color: rgb(76, 97, 182);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.contenedorCartas{
+  min-width: 330px;
+}
+
+.carta{
+  position: relative;
+  width: 320px;
+  height: 630px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  border: solid 1px rgba(255, 255, 255, 0.14);
+  box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  animation-duration: 2s;
+  z-index: 1000;
+}
+
+.carta:hover{
+  box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.dorsoCarta{
+  position: absolute;
+  width: 320px;
+  height: 630px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  border: solid 1px rgba(255, 255, 255, 0.14);
+  box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.dorsoCartaOculta{
+  z-index: 900;
+}
+
+
+.positionIzq0{
+  margin-left: 10px !important;
+}
+
+.positionIzq1{
+  margin-left: 30px !important;
+}
+
+.positionIzq2{
+  margin-left: 50px !important;
+}
+
+.positionIzq3{
+  margin-left: 70px !important;
+}
+
+.positionIzq4{
+  margin-left: 90px !important;
+}
+
+.positionIzq5{
+  margin-left: 110px !important;
+}
+
+.positionIzq6{
+  margin-left: 130px !important;
+}
+
+.positionIzq7{
+  margin-left: 150px !important;
+}
+
+.positionIzq8{
+  margin-left: 170px !important;
+}
+
+.positionIzq9{
+  margin-left: 190px !important;
+}
+
+.positionDer0{
+  margin-left: -10px !important;
+}
+
+.positionDer1{
+  margin-left: -30px !important;
+}
+
+.positionDer2{
+  margin-left: -50px !important;
+}
+
+.positionDer3{
+  margin-left: -70px !important;
+}
+
+.positionDer4{
+  margin-left: -90px !important;
+}
+
+.positionDer5{
+  margin-left: -110px !important;
+}
+
+.positionDer6{
+  margin-left: -130px !important;
+}
+
+.positionDer7{
+  margin-left: -150px !important;
+}
+
+.positionDer8{
+  margin-left: -170px !important;
+}
+
+.positionDer9{
+  margin-left: -190px !important;
+}
+
+.imagenDorsoCarta{
+  width: 100%;
+  height: 100.1%;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 1px rgba(255, 255, 255, 0.14);
+}
+
+.contenedorNombreCarta{
+  height: 20px;
+  margin: 10px 10px 5px 10px;
+}
+
+.nombreCarta{
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-top: 0px;
+  margin: 0px;
+  color: indigo;
+}
+
+.logoCarta{
+  height: 100%;
+}
+
+.carta p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagencontainer{
+  width: 100%;
+}
+
+.imagen{
+  width: 100%;
+  padding: 0px 10px 5px 10px;
+  border-radius: 20px;
+  border: solid 1px rgba(255, 255, 255, 0.14);
+}
+
+.propiedad{
+  margin: 0px 10px 0px 10px;
+  border-bottom: 1px solid rgb(151, 151, 151);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+.valorPropiedad{
+  position: absolute;
+  text-align: right;
+  width: 300px;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.valorPropiedad:hover{
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgb(9, 170, 44));
+  transition: all 0.2s ease-in-out;
+}
+
+.publisherSelector{
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+#DCSelector{
+  cursor: pointer;
+}
+
+#MarvelSelector{
+  cursor: pointer;
+}
+
+#imgDCSelector{
+  width: 100%;
+  min-width: 300px;
+  border-radius: 20px;
+}
+
+#imgMarvelSelector{
+  width: 100%;
+  min-width: 300px;
+  border-radius: 20px;
+}
+
+#vsSelector{
+  width: 150px;
+}
+
+#imgVsSelector{
+  width: 100px;
+  min-width: 100px;
+}
+
+/*SOMBRA MOVIL*/
+/*Efecto de sombra con caja que sube y baja*/
+.sombra-movil:hover{
+  transform: translateY(-6px);
+  transition-duration: 0.3s;
+  animation: 1.5s mover-caja infinite;
+}
+.sombra-movil:before{
+  content: '';
+  background: radial-gradient(ellipse, 
+    rgba(0,0,0,0.35) 0%, 
+    rgba(0,0,0,0) 80%);
+  width: 90%;
+  height: 20px;
+  top: 100%;
+  left: 5%;
+  position: absolute;
+  opacity: 0;
+}
+.sombra-movil:hover:before{
+  opacity: 1;
+  transform: translateY(6px);
+  transition-duration: 0.3s;
+  animation: 1.5s mover-sombra infinite;
+}
+
+@keyframes mover-caja{ 
+  50%{ 
+    transform: translateY(-10px);
+  } 
+}
+@keyframes mover-sombra{
+  50%{
+    opacity: 1;
+    transform: translateY(10px) scale(0.9)
+  }
+}
+
+.swal-modal{
+  height: 290px;
+  width: 310px;
+  background-color: rgba(255, 255, 255, 0.3); 
+  border-radius: 20px;
+}
+
+.swal-title{
+  background-color: #fefae3d2;
+  padding: 0px;
+  border: 1px solid #fefae3d2;
+  display: block;
+  margin: 10px;
+  text-align: center;
+  color: #61534e;
+  border-radius: 10px;
+}
+
+.swal-text{
+  background-color: #fefae3d2;
+  padding: 7px;
+  border: 1px solid #fefae3d2;
+  display: block;
+  margin-left: 10px;
+  text-align: center;
+  color: #61534e;
+  border-radius: 10px;
+}
+
+.swal-button--confirm{
+  background-color: rgba(27, 27, 216, 0.541);
+  padding: 7px;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.swal-footer{
+  padding: 0px;
+  margin: 0px;
+}
+.swal-icon{
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.swal-icon--success{
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.swal-icon--success:after, .swal-icon--success:before{
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.swal-icon--success__hide-corners{
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.swal-icon--warning{
+
+}
+
+
+/* <div class="swal-modal" role="dialog" aria-modal="true"><div class="swal-icon swal-icon--success">
+<span class="swal-icon--success__line swal-icon--success__line--long"></span>
+<span class="swal-icon--success__line swal-icon--success__line--tip"></span>
+
+<div class="swal-icon--success__ring"></div>
+<div class="swal-icon--success__hide-corners"></div>
+</div><div class="swal-title" style="">Ganaste!</div><div class="swal-text" style="">Do you want to continue</div><div class="swal-footer"><div class="swal-button-container">
+
+<button class="swal-button swal-button--confirm">Continuar</button>
+
+<div class="swal-button__loader">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+</div></div></div> */
+

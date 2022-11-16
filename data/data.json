@@ -1,0 +1,1343 @@
+[
+  {
+    "id": "1",
+    "name": "Superman",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "2600",
+      "speed": "1200"
+    },
+    "biography": {
+      "full-name": "Clark Kent",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Kryptonian",
+      "height": "191",
+      "weight": "101"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667678566/heroes/1-superman_zsklfv.jpg"
+    }
+  },
+
+  {
+    "id": "2",
+    "name": "Iron Man",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "2130",
+      "speed": "930"
+    },
+    "biography": {
+      "full-name": "Tony Stark",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "198",
+      "weight": "191"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667678668/heroes/2-ironman_wg7qt5.jpg"
+    }
+  },
+
+  {
+    "id": "3",
+    "name": "Hulk",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "2500",
+      "speed": "450"
+    },
+    "biography": {
+      "full-name": "Bruce Banner",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human / Radiation",
+      "height": "244",
+      "weight": "630"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667678701/heroes/3-hulk_tvpx3t.jpg"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Loki",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "1750",
+      "speed": "730"
+    },
+    "biography": {
+      "full-name": "Loki Laufeyson",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Asgardian",
+      "height": "193",
+      "weight": "236"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667678755/heroes/4-loki_dzzbvo.jpg"
+    }
+  },
+
+  {
+    "id": "5",
+    "name": "Flash",
+    "powerstats": {
+      "intelligence": "63",
+      "strength": "900",
+      "speed": "800000"
+    },
+    "biography": {
+      "full-name": "Jay Garrick",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "180",
+      "weight": "81"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667696220/heroes/5-flash_rwdmvi.jpg"
+    }
+  },
+
+  {
+    "id": "6",
+    "name": "Wonder Woman",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "2230",
+      "speed": "700"
+    },
+    "biography": {
+      "full-name": "Diana Prince",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Amazon",
+      "height": "183",
+      "weight": "74"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667696539/heroes/6-wonderwoman_usyqbh.jpg"
+    }
+  },
+
+  {
+    "id": "7",
+    "name": "Batgirl",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "700",
+      "speed": "77"
+    },
+    "biography": {
+      "full-name": "Barbara Gordon",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human",
+      "height": "170",
+      "weight": "57"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667697093/heroes/7-batgirl_oaflng.jpg"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Supergirl",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "2100",
+      "speed": "935"
+    },
+    "biography": {
+      "full-name": "Kara Zor-El",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Kryptonian",
+      "height": "165",
+      "weight": "54"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667697343/heroes/8-supergirl_hpnbfc.jpg"
+    }
+  },
+
+  {
+    "id": "9",
+    "name": "Shazam",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "2370",
+      "speed": "1000"
+    },
+    "biography": {
+      "full-name": "Billy Batson",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "192",
+      "weight": "120"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667697853/heroes/9-shazam_mdcmzy.jpg"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Doctor Fate",
+    "powerstats": {
+      "intelligence": "81",
+      "strength": "700",
+      "speed": "220"
+    },
+    "biography": {
+      "full-name": "Kent Nelson",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "89"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667698307/heroes/10-drfate_uxnjjw.jpg"
+    }
+  },
+
+  {
+    "id": "11",
+    "name": "Green Lantern",
+    "powerstats": {
+      "intelligence": "69",
+      "strength": "2200",
+      "speed": "940"
+    },
+    "biography": {
+      "full-name": "Hal Jordan",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "90"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667698668/heroes/11-greenlantern_lyl643.jpg"
+    }
+  },
+
+  {
+    "id": "12",
+    "name": "Aquaman",
+    "powerstats": {
+      "intelligence": "81",
+      "strength": "1410",
+      "speed": "220"
+    },
+    "biography": {
+      "full-name": "Orin",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Atlantean",
+      "height": "185",
+      "weight": "146"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667698871/heroes/12-aquaman_glqhb4.jpg"
+    }
+  },
+
+  {
+    "id": "13",
+    "name": "Penguin",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "30",
+      "speed": "15"
+    },
+    "biography": {
+      "full-name": "Oswald Chesterfield Cobblepot",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "157",
+      "weight": "79"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667699291/heroes/13-penguin_o5grzc.jpg"
+    }
+  },
+
+  {
+    "id": "14",
+    "name": "Catwoman",
+    "powerstats": {
+      "intelligence": "92",
+      "strength": "80",
+      "speed": "65"
+    },
+    "biography": {
+      "full-name": "Selina Kyle",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human",
+      "height": "175",
+      "weight": "61"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1668293447/heroes/14-catwoman_oax9yg.jpg"
+    }
+  },
+
+  {
+    "id": "15",
+    "name": "Riddler",
+    "powerstats": {
+      "intelligence": "102",
+      "strength": "625",
+      "speed": "45"
+    },
+    "biography": {
+      "full-name": "Edward Nigma",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "176",
+      "weight": "62"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667699741/heroes/15-riddler_rhuuz4.jpg"
+    }
+  },
+
+  {
+    "id": "16",
+    "name": "Joker",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "85",
+      "speed": "45"
+    },
+    "biography": {
+      "full-name": "Jack Napier",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "196",
+      "weight": "86"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667700076/heroes/16-joker_jgom60.jpg"
+    }
+  },
+
+  {
+    "id": "17",
+    "name": "Thing",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "2100",
+      "speed": "50"
+    },
+    "biography": {
+      "full-name": "Ben Grimm",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human / Radiation",
+      "height": "183",
+      "weight": "350"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667700334/heroes/17-thing_qretgw.jpg"
+    }
+  },
+
+  {
+    "id": "18",
+    "name": "Human Torch",
+    "powerstats": {
+      "intelligence": "63",
+      "strength": "730",
+      "speed": "930"
+    },
+    "biography": {
+      "full-name": "Johnny Storm",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human / Radiation",
+      "height": "178",
+      "weight": "77"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667700559/heroes/18-humantorch_vs4mgc.jpg"
+    }
+  },
+
+  {
+    "id": "19",
+    "name": "Wolverine",
+    "powerstats": {
+      "intelligence": "63",
+      "strength": "990",
+      "speed": "90"
+    },
+    "biography": {
+      "full-name": "Logan",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Mutant",
+      "height": "180",
+      "weight": "135"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667700796/heroes/19-wolverine_bc07qe.jpg"
+    }
+  },
+
+  {
+    "id": "20",
+    "name": "Spider-Man",
+    "powerstats": {
+      "intelligence": "90",
+      "strength": "1280",
+      "speed": "155"
+    },
+    "biography": {
+      "full-name": "Peter Parker",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "178",
+      "weight": "74"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667700969/heroes/20-spiderman_g4xta3.jpg"
+    }
+  },
+
+  {
+    "id": "21",
+    "name": "Colossus",
+    "powerstats": {
+      "intelligence": "63",
+      "strength": "2100",
+      "speed": "95"
+    },
+    "biography": {
+      "full-name": "Piotr Nikolaievitch Rasputin",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Mutant",
+      "height": "226",
+      "weight": "225"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667701144/heroes/21-colossus_fyspqi.jpg"
+    }
+  },
+  {
+    "id": "22",
+    "name": "Green Goblin",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "1250",
+      "speed": "205"
+    },
+    "biography": {
+      "full-name": "Norman Osborn",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "180",
+      "weight": "83"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667701360/heroes/22-greengoblin_izgdww.jpg"
+    }
+  },
+
+  {
+    "id": "23",
+    "name": "Invisible Woman",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "250",
+      "speed": "80"
+    },
+    "biography": {
+      "full-name": "Susan Storm Richards",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human / Radiation",
+      "height": "168",
+      "weight": "54"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667701541/heroes/23-invisiblewoman_uigp2a.jpg"
+    }
+  },
+
+  {
+    "id": "24",
+    "name": "Storm",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "670",
+      "speed": "166"
+    },
+    "biography": {
+      "full-name": "Ororo Munroe",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Mutant",
+      "height": "180",
+      "weight": "57"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667701741/heroes/24-storm_invjxp.jpg"
+    }
+  },
+
+  {
+    "id": "25",
+    "name": "Silver Surfer",
+    "powerstats": {
+      "intelligence": "56",
+      "strength": "2400",
+      "speed": "1000"
+    },
+    "biography": {
+      "full-name": "Norrin Radd",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Alien",
+      "height": "193",
+      "weight": "101"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667701904/heroes/25-silversurfer_xoreae.jpg"
+    }
+  },
+
+  {
+    "id": "26",
+    "name": "Daredevil",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "880",
+      "speed": "83"
+    },
+    "biography": {
+      "full-name": "Matt Murdock",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "183",
+      "weight": "90"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667702074/heroes/26-daredevil_gbpwxh.jpg"
+    }
+  },
+
+  {
+    "id": "27",
+    "name": "Hawkeye",
+    "powerstats": {
+      "intelligence": "56",
+      "strength": "850",
+      "speed": "80"
+    },
+    "biography": {
+      "full-name": "Clint Barton",
+      "publisher": "Goliath",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "191",
+      "weight": "104"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667702258/heroes/27-hawkeye_w2dto6.jpg"
+    }
+  },
+
+  {
+    "id": "28",
+    "name": "Doctor Octopus",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "1250",
+      "speed": "135"
+    },
+    "biography": {
+      "full-name": "Otto Octavius",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "175",
+      "weight": "110"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667702442/heroes/28-doctoroctopus_e5veov.jpg"
+    }
+  },
+
+  {
+    "id": "29",
+    "name": "Doctor Doom",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "1600",
+      "speed": "85"
+    },
+    "biography": {
+      "full-name": "Victor von Doom",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "201",
+      "weight": "187"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667702593/heroes/29-doctordoom_qbzl3h.jpg"
+    }
+  },
+
+  {
+    "id": "30",
+    "name": "Venom",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "1500",
+      "speed": "97"
+    },
+    "biography": {
+      "full-name": "Eddie Brock",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Symbiote",
+      "height": "191",
+      "weight": "117"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667702751/heroes/30-venom_ahhisq.jpg"
+    }
+  },
+
+  {
+    "id": "31",
+    "name": "Scarlet Witch",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "250",
+      "speed": "125"
+    },
+    "biography": {
+      "full-name": "Wanda Maximoff",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Mutant",
+      "height": "170",
+      "weight": "59"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667702950/heroes/31-scarletwitch_zjshmi.jpg"
+    }
+  },
+
+  {
+    "id": "32",
+    "name": "Captain America",
+    "powerstats": {
+      "intelligence": "69",
+      "strength": "950",
+      "speed": "92"
+    },
+    "biography": {
+      "full-name": "Steve Rogers",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "108"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667703127/heroes/32-captainamerica_w1w3nk.jpg"
+    }
+  },
+
+  {
+    "id": "33",
+    "name": "Emma Frost",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "1050",
+      "speed": "45"
+    },
+    "biography": {
+      "full-name": "Emma Frost",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human / Radiation",
+      "height": "178",
+      "weight": "65"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667703617/heroes/33-emmafrost_uwtdzs.jpg"
+    }
+  },
+
+  {
+    "id": "34",
+    "name": "Magneto",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "1390",
+      "speed": "800"
+    },
+    "biography": {
+      "full-name": "Erik Magnus Lensherr",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Mutant",
+      "height": "188",
+      "weight": "86"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667735007/heroes/34-magneto_ejrm3m.jpg"
+    }
+  },
+
+  {
+    "id": "35",
+    "name": "Phoenix",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "1850",
+      "speed": "890"
+    },
+    "biography": {
+      "full-name": "Jean Grey",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Mutant",
+      "height": "168",
+      "weight": "52"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667735428/heroes/35-phoenix_xv5mkn.jpg"
+    }
+  },
+
+  {
+    "id": "36",
+    "name": "Ghost Rider",
+    "powerstats": {
+      "intelligence": "50",
+      "strength": "1500",
+      "speed": "280"
+    },
+    "biography": {
+      "full-name": "Johnny Blaze",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Demon",
+      "height": "188",
+      "weight": "99"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667735712/heroes/36-ghostrider_tmv5xx.jpg"
+    }
+  },
+
+  {
+    "id": "37",
+    "name": "Vision",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "1420",
+      "speed": "830"
+    },
+    "biography": {
+      "full-name": "Vision",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Android",
+      "height": "191",
+      "weight": "135"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667735879/heroes/37-vision_sfe36j.jpg"
+    }
+  },
+
+  {
+    "id": "38",
+    "name": "Lex Luthor",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "415",
+      "speed": "55"
+    },
+    "biography": {
+      "full-name": "Lex Luthor",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "95"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667736224/heroes/38-lexluthor_sgvge9.jpg"
+    }
+  },
+
+  {
+    "id": "39",
+    "name": "Black Adam",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "2200",
+      "speed": "925"
+    },
+    "biography": {
+      "full-name": "Teth-Adam",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "null",
+      "height": "191",
+      "weight": "113"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667736564/heroes/39-blackadam_xdzucq.jpg"
+    }
+  },
+
+  {
+    "id": "40",
+    "name": "Cyborg",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "1100",
+      "speed": "150"
+    },
+    "biography": {
+      "full-name": "Victor Stone",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Cyborg",
+      "height": "198",
+      "weight": "173"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667736938/heroes/40-cyborg_xjea51.jpg"
+    }
+  },
+
+  {
+    "id": "41",
+    "name": "Batman",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "500",
+      "speed": "85"
+    },
+    "biography": {
+      "full-name": "Bruce Wayne",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "95"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667737141/heroes/41-batman_mmm9xw.jpg"
+    }
+  },
+
+  {
+    "id": "42",
+    "name": "Hawk",
+    "powerstats": {
+      "intelligence": "38",
+      "strength": "835",
+      "speed": "300"
+    },
+    "biography": {
+      "full-name": "Henry Hall",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "null",
+      "height": "185",
+      "weight": "89"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667737523/heroes/42-hawk_tuph2o.jpg"
+    }
+  },
+
+  {
+    "id": "43",
+    "name": "Green Arrow",
+    "powerstats": {
+      "intelligence": "81",
+      "strength": "710",
+      "speed": "220"
+    },
+    "biography": {
+      "full-name": "Oliver Queen",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "88"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667737744/heroes/43-greenarrow_k1efjq.jpg"
+    }
+  },
+
+  {
+    "id": "44",
+    "name": "Black Canary",
+    "powerstats": {
+      "intelligence": "63",
+      "strength": "100",
+      "speed": "110"
+    },
+    "biography": {
+      "full-name": "Laurel Lance",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Metahuman",
+      "height": "170",
+      "weight": "59"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667738044/heroes/44-blackcanary_yxwehq.jpg"
+    }
+  },
+
+  {
+    "id": "45",
+    "name": "Thor",
+    "powerstats": {
+      "intelligence": "69",
+      "strength": "1100",
+      "speed": "250"
+    },
+    "biography": {
+      "full-name": "Thor Odinson",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Asgardian",
+      "height": "198",
+      "weight": "288"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667738340/heroes/45-thor_tai7w1.jpg"
+    }
+  },
+
+  {
+    "id": "46",
+    "name": "Cyclops",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "950",
+      "speed": "130"
+    },
+    "biography": {
+      "full-name": "Scott Summers",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Mutant",
+      "height": "191",
+      "weight": "88"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667738561/heroes/46-cyclops_dp5k6f.jpg"
+    }
+  },
+
+  {
+    "id": "47",
+    "name": "Spider-Gwen",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "955",
+      "speed": "150"
+    },
+    "biography": {
+      "full-name": "Gwen Stacy",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human",
+      "height": "165",
+      "weight": "56"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667738823/heroes/47-spidergwen_lyrwfb.jpg"
+    }
+  },
+
+  {
+    "id": "48",
+    "name": "Captain Marvel",
+    "powerstats": {
+      "intelligence": "84",
+      "strength": "2600",
+      "speed": "1200"
+    },
+    "biography": {
+      "full-name": "Carol Danvers",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human-Kree",
+      "height": "180",
+      "weight": "74"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667739177/heroes/48-captainmarvel_kpkwfh.jpg"
+    }
+  },
+
+  {
+    "id": "49",
+    "name": "Black Widow",
+    "powerstats": {
+      "intelligence": "85",
+      "strength": "720",
+      "speed": "70"
+    },
+    "biography": {
+      "full-name": "Natasha Romanoff",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human",
+      "height": "170",
+      "weight": "59"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667739601/heroes/49-blackwidow_fpbyyk.jpg"
+    }
+  },
+
+  {
+    "id": "50",
+    "name": "Doctor Strange",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "750",
+      "speed": "480"
+    },
+    "biography": {
+      "full-name": "Stephen Strange",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": "188",
+      "weight": "81"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667739837/heroes/50-doctorstrange_kocxbp.jpg"
+    }
+  },
+
+  {
+    "id": "51",
+    "name": "Harley Quinn",
+    "powerstats": {
+      "intelligence": "85",
+      "strength": "80",
+      "speed": "55"
+    },
+    "biography": {
+      "full-name": "Harley Quinn",
+      "publisher": "DC Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human",
+      "height": "170",
+      "weight": "63"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667740135/heroes/51-harleyquinn_f6d2qn.jpg"
+    }
+  },
+
+  {
+    "id": "52",
+    "name": "Deadpool",
+    "powerstats": {
+      "intelligence": "69",
+      "strength": "150",
+      "speed": "55"
+    },
+    "biography": {
+      "full-name": "Wade Wilson",
+      "publisher": "Marvel Comics",
+      "alignment": "neutral"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Mutant",
+      "height": "188",
+      "weight": "95"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667740454/heroes/52-deadpool_bsxvug.jpg"
+    }
+  },
+
+  {
+    "id": "53",
+    "name": "Thanos",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "2600",
+      "speed": "380"
+    },
+    "biography": {
+      "full-name": "Thanos",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Eternal",
+      "height": "201",
+      "weight": "443"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667740737/heroes/53-thanos_oocusy.jpg"
+    }
+  },
+
+  {
+    "id": "54",
+    "name": "Mera",
+    "powerstats": {
+      "intelligence": "76",
+      "strength": "1300",
+      "speed": "210"
+    },
+    "biography": {
+      "full-name": "Mera",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Atlantean",
+      "height": "175",
+      "weight": "72"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667741032/heroes/54-mera_a2xed5.jpg"
+    }
+  },
+
+  {
+    "id": "55",
+    "name": "Hela",
+    "powerstats": {
+      "intelligence": "89",
+      "strength": "1100",
+      "speed": "220"
+    },
+    "biography": {
+      "full-name": "Hela",
+      "publisher": "Marvel Comics",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Asgardian",
+      "height": "213",
+      "weight": "225"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667741297/heroes/55-hela_a9erex.jpg"
+    }
+  },
+
+  {
+    "id": "56",
+    "name": "Raven",
+    "powerstats": {
+      "intelligence": "85",
+      "strength": "900",
+      "speed": "35"
+    },
+    "biography": {
+      "full-name": "Rachel Roth",
+      "publisher": "DC Comics",
+      "alignment": "neutral"
+    },
+    "appearance": {
+      "gender": "Female",
+      "race": "Human",
+      "height": "165",
+      "weight": "50"
+    },
+    "image": {
+      "url": "https://res.cloudinary.com/dmehzrcf1/image/upload/v1667741816/heroes/56-raven_rojyhz.jpg"
+    }
+  }
+
+
+]
