@@ -2,7 +2,7 @@ const juegoModulo = (() => {
   'use strict';
 
 //declaraciones
-const apiUrl = '../data/data.json';
+const apiUrl = './js/data.json';
 const body = document.body;
 const heroes = [];
 let contadorPosicionIzq = 0;
