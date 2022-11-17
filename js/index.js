@@ -45,7 +45,7 @@ const getHeroesByPublisher = async(publisher) => {
     throw error;
   }
 }
-
+  const main = document.getElementById('main');
   const contenedor = document.createElement('div');
   contenedor.classList.add('contenedorPrincipal','row', 'justify-content-center');
   const contenedorCartasDorsoIzq = document.createElement('div');
@@ -57,10 +57,21 @@ const getHeroesByPublisher = async(publisher) => {
   const contenedorCartasDorsoDer = document.createElement('div');
   contenedorCartasDorsoDer.classList.add('col-3','d-flex', 'justify-content-end')
 
+
+const cargarHome = () => {
+  crearSelectores();
+  cartas.innerHTML = '';
+  carta.innerHTML = '';
+  dorsoCarta.innerHTML = '';
+  cartaDerecha.innerHTML = '';
+  dorsoCartaOculta.innerHTML = '';
+  dorsoCartaDerecha.innerHTML = '';
+} ; 
   
 const crearHtml = () => {
 
-  body.appendChild(contenedor);
+
+  main.appendChild(contenedor);
   contenedor.appendChild(contenedorSelector);
   contenedor.appendChild(contenedorCartasDorsoIzq);
   contenedor.appendChild(contenedorCartaIzq);
@@ -76,24 +87,25 @@ const crearHtml = () => {
 
   crearMenuNav();
   crearSelectores();
-  
+  crearFooter();
 
   const juego = document.getElementById('juego');
   const cartasHeroes = document.getElementById('cartasHeroes');
+  const estadisticas = document.getElementById('stats');
+  const navbarBrand = document.getElementById('navbarBrand');
+
   juego.addEventListener('click', () => {
-    crearSelectores();
-    cartas.innerHTML = '';
-    carta.innerHTML = '';
-    dorsoCarta.innerHTML = '';
-    cartaDerecha.innerHTML = '';
-    dorsoCartaOculta.innerHTML = '';
-    dorsoCartaDerecha.innerHTML = '';
+    cargarHome();
   });
+
   cartasHeroes.addEventListener('click', () => {
     crearCartas();
     contenedorSelector.innerHTML = '';
   });
 
+  navbarBrand.addEventListener('click', () => {
+    cargarHome();
+  });
 
 }
 
@@ -104,9 +116,9 @@ const menuNav = document.createElement('div');
 header.appendChild(menuNav);
 
 const crearMenuNav = () => {
-  menuNav.innerHTML = `<nav class="navbar navbar-expand-lg bg-light">
+  menuNav.innerHTML = `<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a id="navbarBrand" class="navbar-brand" href="#">
       <div class="d-flex align-content-center containerLogo">
         <img class="dcLogo" src="./img/dc_logo.png" alt="DC_logo">
         <img class="vsLogo" src="./img/vs_logo.png" alt="Vs_logo">
@@ -124,11 +136,40 @@ const crearMenuNav = () => {
         <li class="nav-item">
           <a id="cartasHeroes" class="nav-link" href="#">Heroes</a>
         </li>
+        <li class="nav-item">
+        <a id="stats" class="nav-link" href="#">Estadísticas</a>
+      </li>
       </ul>
     </div>
   </div>
 </nav>`
-  
+}
+
+const footerSitio = document.getElementById('footerSitio');
+const footer= document.createElement('div');
+footerSitio.appendChild(footer);
+
+const crearFooter = () => {
+  footer.innerHTML = `
+  <div class="row justify-content-around align-items-center">
+    <div class="col-lg-4 col-md-6">
+      <p class="footer__copyright">Copyright © 2022, All Right Reserved</p>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <p class="footer__nombre">Desarrollado por: <b>Esteban Perea</b></p>
+    </div>
+    <!--Redes sociales -->
+    <div class="redes_sociales col-lg-4 col-md-12">
+      <a href="https://www.facebook.com/people/Esteban-Gabriel-Jes%C3%BAs-Perea/100010899370670/"
+        target="_blank"><i class="bi bi-facebook redes_logos"></i></a>
+      <a href="https://www.instagram.com/estebangabrieljesus/" target="_blank"><i
+          class="bi bi-instagram redes_logos"></i></a>
+      <a href="https://www.linkedin.com/in/esteban-perea-211582224/?originalSubdomain=ar" target="_blank"><i
+          class="bi bi-linkedin redes_logos"></i></a>
+      <a href="https://github.com/Esteban674" target="_blank"><i class="bi bi-github redes_logos"></i></a>
+    </div>
+  </div>
+  `
 }
 
 
@@ -613,3 +654,6 @@ const init = () => {
 init();
 
 })();
+
+//TODO usar la funcion reduce para mostrar el acumulado 
+// TODO usar sort para ordenar los heroes por alguna propiedad
