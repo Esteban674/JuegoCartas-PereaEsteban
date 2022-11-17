@@ -56,17 +56,20 @@ const getHeroesByPublisher = async(publisher) => {
   const contenedorCartaDer = document.createElement('div');
   contenedorCartaDer.classList.add('col-3');
   const contenedorCartasDorsoDer = document.createElement('div');
-  contenedorCartasDorsoDer.classList.add('col-3','d-flex', 'justify-content-end')
+  contenedorCartasDorsoDer.classList.add('col-3','d-flex', 'justify-content-end');
+  const heroesTarjetas = document.getElementById('heroesLista')
 
 
 const cargarHome = () => {
   crearSelectores();
-  cartas.innerHTML = '';
+  tarjetas.innerHTML = '';
   carta.innerHTML = '';
   dorsoCarta.innerHTML = '';
   cartaDerecha.innerHTML = '';
   dorsoCartaOculta.innerHTML = '';
   dorsoCartaDerecha.innerHTML = '';
+  header.style.background = backgroundVariable;
+  tarjetas.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`; 
 } ; 
   
 const crearHtml = () => {
@@ -83,7 +86,7 @@ const crearHtml = () => {
   contenedorCartaDer.appendChild(dorsoCartaOculta);
   // contenedorCartaDer.appendChild(cartaDerecha);
   contenedorCartasDorsoDer.appendChild(dorsoCartaDerecha);
-  contenedor.appendChild(cartas);
+  heroesTarjetas.appendChild(tarjetas);
 
 
   crearMenuNav();
@@ -102,7 +105,8 @@ const crearHtml = () => {
   });
 
   cartasHeroes.addEventListener('click', () => {
-    // crearCartas();
+    cargarHome();
+    crearTarjetas();
     contenedorSelector.innerHTML = '';
   });
 
@@ -262,8 +266,9 @@ const generarContrarioDC = async() => {
 }
 
 
-const cartas = document.createElement('div');
-cartas.classList.add('contenedorCartas','justify-content-center');
+const tarjetas = document.createElement('div');
+tarjetas.classList.add('contenedorTarjetas','justify-content-center');
+
 
 const carta = document.createElement('div');
 carta.classList.add('contenedorCartas','justify-content-center');
@@ -386,6 +391,7 @@ const crearCarta = async(id) => {
       backgroundVariable = `rgba(${r},${g},${b},${a})`
       contenedor.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`;    
       header.style.background = backgroundVariable;
+      tarjetas.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`;   
       footerSitio.style.background = `rgba(255,255,255,1)`;
       })
 
@@ -608,36 +614,20 @@ const crearCartaDerecha = async(id) => {
     `
 };
 
-const crearCartas = async() => {
+const crearTarjetas = async() => {
   const heroes = await getHeroes();
   heroes.map(heroe =>{
-    cartas.innerHTML += `
-        <div class="carta animate__animated animate__fadeIn">
-        <div class="d-flex justify-content-between align-items-center contenedorNombreCarta">
-          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
-          <p class="text-center nombreCarta">${heroe.name.toUpperCase()}</p> 
-          <img src="${heroe.biography.publisher == 'DC Comics'? './img/dcLogoCarta.png':'./img/marvelLogoCarta.png'}" alt="logo Carta" srcset="" class="logoCarta">
-        </div>
-
-        <div>
-        <img src="${heroe.image.url}" alt="" srcset="" class="imagen">
-        </div>
-        <div class="d-flex justify-content-between propiedad">
-        <p>ALTURA (cm):</p> <p>${heroe.appearance.height}</p>
-        </div>
-        <div class="d-flex justify-content-between propiedad">
-        <p>PESO (kg):</p> <p>${heroe.appearance.weight}</p>
-        </div>
-        <div class="d-flex justify-content-between propiedad">
-        <p>INTELIGENCIA (IQ):</p> <p>${Math.round(heroe.powerstats.intelligence * 1.6)}</p>
-        </div>
-        <div class="d-flex justify-content-between propiedad">
-        <p>FUERZA (kg):</p> <p>${heroe.powerstats.strength}</p>
-        </div>
-        <div class="d-flex justify-content-between propiedad">
-        <p>VELOCIDAD (km/h):</p> <p>${heroe.powerstats.speed}</p>
-        </div>
-        </div>
+    tarjetas.innerHTML += `
+    <div class="card mt-5 me-4" style="max-width: 380px;">
+      <img src="${heroe.image.url}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div> 
     `
   })
 }
