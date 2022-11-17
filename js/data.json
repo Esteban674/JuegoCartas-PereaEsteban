@@ -8,7 +8,7 @@
       "speed": "1200"
     },
     "biography": {
-      "full-name": "Clark Kent",
+      "fullName": "Clark Kent",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -32,7 +32,7 @@
       "speed": "930"
     },
     "biography": {
-      "full-name": "Tony Stark",
+      "fullName": "Tony Stark",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -56,7 +56,7 @@
       "speed": "450"
     },
     "biography": {
-      "full-name": "Bruce Banner",
+      "fullName": "Bruce Banner",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -79,7 +79,7 @@
       "speed": "730"
     },
     "biography": {
-      "full-name": "Loki Laufeyson",
+      "fullName": "Loki Laufeyson",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -103,7 +103,7 @@
       "speed": "800000"
     },
     "biography": {
-      "full-name": "Jay Garrick",
+      "fullName": "Jay Garrick",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -127,7 +127,7 @@
       "speed": "700"
     },
     "biography": {
-      "full-name": "Diana Prince",
+      "fullName": "Diana Prince",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -151,7 +151,7 @@
       "speed": "77"
     },
     "biography": {
-      "full-name": "Barbara Gordon",
+      "fullName": "Barbara Gordon",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -174,7 +174,7 @@
       "speed": "935"
     },
     "biography": {
-      "full-name": "Kara Zor-El",
+      "fullName": "Kara Zor-El",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -198,7 +198,7 @@
       "speed": "1000"
     },
     "biography": {
-      "full-name": "Billy Batson",
+      "fullName": "Billy Batson",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -221,7 +221,7 @@
       "speed": "220"
     },
     "biography": {
-      "full-name": "Kent Nelson",
+      "fullName": "Kent Nelson",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -245,7 +245,7 @@
       "speed": "940"
     },
     "biography": {
-      "full-name": "Hal Jordan",
+      "fullName": "Hal Jordan",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -269,7 +269,7 @@
       "speed": "220"
     },
     "biography": {
-      "full-name": "Orin",
+      "fullName": "Orin",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -293,7 +293,7 @@
       "speed": "15"
     },
     "biography": {
-      "full-name": "Oswald Chesterfield Cobblepot",
+      "fullName": "Oswald Chesterfield Cobblepot",
       "publisher": "DC Comics",
       "alignment": "bad"
     },
@@ -317,7 +317,7 @@
       "speed": "65"
     },
     "biography": {
-      "full-name": "Selina Kyle",
+      "fullName": "Selina Kyle",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -341,7 +341,7 @@
       "speed": "45"
     },
     "biography": {
-      "full-name": "Edward Nigma",
+      "fullName": "Edward Nigma",
       "publisher": "DC Comics",
       "alignment": "bad"
     },
@@ -365,7 +365,7 @@
       "speed": "45"
     },
     "biography": {
-      "full-name": "Jack Napier",
+      "fullName": "Jack Napier",
       "publisher": "DC Comics",
       "alignment": "bad"
     },
@@ -389,7 +389,7 @@
       "speed": "50"
     },
     "biography": {
-      "full-name": "Ben Grimm",
+      "fullName": "Ben Grimm",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -413,7 +413,7 @@
       "speed": "930"
     },
     "biography": {
-      "full-name": "Johnny Storm",
+      "fullName": "Johnny Storm",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -437,7 +437,7 @@
       "speed": "90"
     },
     "biography": {
-      "full-name": "Logan",
+      "fullName": "Logan",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -461,7 +461,7 @@
       "speed": "155"
     },
     "biography": {
-      "full-name": "Peter Parker",
+      "fullName": "Peter Parker",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -485,7 +485,7 @@
       "speed": "95"
     },
     "biography": {
-      "full-name": "Piotr Nikolaievitch Rasputin",
+      "fullName": "Piotr Nikolaievitch Rasputin",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -508,7 +508,7 @@
       "speed": "205"
     },
     "biography": {
-      "full-name": "Norman Osborn",
+      "fullName": "Norman Osborn",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -532,7 +532,7 @@
       "speed": "80"
     },
     "biography": {
-      "full-name": "Susan Storm Richards",
+      "fullName": "Susan Storm Richards",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -556,7 +556,7 @@
       "speed": "166"
     },
     "biography": {
-      "full-name": "Ororo Munroe",
+      "fullName": "Ororo Munroe",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -580,7 +580,7 @@
       "speed": "1000"
     },
     "biography": {
-      "full-name": "Norrin Radd",
+      "fullName": "Norrin Radd",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -604,7 +604,7 @@
       "speed": "83"
     },
     "biography": {
-      "full-name": "Matt Murdock",
+      "fullName": "Matt Murdock",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -628,7 +628,7 @@
       "speed": "80"
     },
     "biography": {
-      "full-name": "Clint Barton",
+      "fullName": "Clint Barton",
       "publisher": "Goliath",
       "alignment": "good"
     },
@@ -652,7 +652,7 @@
       "speed": "135"
     },
     "biography": {
-      "full-name": "Otto Octavius",
+      "fullName": "Otto Octavius",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -676,7 +676,7 @@
       "speed": "85"
     },
     "biography": {
-      "full-name": "Victor von Doom",
+      "fullName": "Victor von Doom",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -700,7 +700,7 @@
       "speed": "97"
     },
     "biography": {
-      "full-name": "Eddie Brock",
+      "fullName": "Eddie Brock",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -724,7 +724,7 @@
       "speed": "125"
     },
     "biography": {
-      "full-name": "Wanda Maximoff",
+      "fullName": "Wanda Maximoff",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -748,7 +748,7 @@
       "speed": "92"
     },
     "biography": {
-      "full-name": "Steve Rogers",
+      "fullName": "Steve Rogers",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -772,7 +772,7 @@
       "speed": "45"
     },
     "biography": {
-      "full-name": "Emma Frost",
+      "fullName": "Emma Frost",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -796,7 +796,7 @@
       "speed": "800"
     },
     "biography": {
-      "full-name": "Erik Magnus Lensherr",
+      "fullName": "Erik Magnus Lensherr",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -820,7 +820,7 @@
       "speed": "890"
     },
     "biography": {
-      "full-name": "Jean Grey",
+      "fullName": "Jean Grey",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -844,7 +844,7 @@
       "speed": "280"
     },
     "biography": {
-      "full-name": "Johnny Blaze",
+      "fullName": "Johnny Blaze",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -868,7 +868,7 @@
       "speed": "830"
     },
     "biography": {
-      "full-name": "Vision",
+      "fullName": "Vision",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -892,7 +892,7 @@
       "speed": "55"
     },
     "biography": {
-      "full-name": "Lex Luthor",
+      "fullName": "Lex Luthor",
       "publisher": "DC Comics",
       "alignment": "bad"
     },
@@ -916,7 +916,7 @@
       "speed": "925"
     },
     "biography": {
-      "full-name": "Teth-Adam",
+      "fullName": "Teth-Adam",
       "publisher": "DC Comics",
       "alignment": "bad"
     },
@@ -940,7 +940,7 @@
       "speed": "150"
     },
     "biography": {
-      "full-name": "Victor Stone",
+      "fullName": "Victor Stone",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -964,7 +964,7 @@
       "speed": "85"
     },
     "biography": {
-      "full-name": "Bruce Wayne",
+      "fullName": "Bruce Wayne",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -988,7 +988,7 @@
       "speed": "300"
     },
     "biography": {
-      "full-name": "Henry Hall",
+      "fullName": "Henry Hall",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -1012,7 +1012,7 @@
       "speed": "220"
     },
     "biography": {
-      "full-name": "Oliver Queen",
+      "fullName": "Oliver Queen",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -1036,7 +1036,7 @@
       "speed": "110"
     },
     "biography": {
-      "full-name": "Laurel Lance",
+      "fullName": "Laurel Lance",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -1060,7 +1060,7 @@
       "speed": "250"
     },
     "biography": {
-      "full-name": "Thor Odinson",
+      "fullName": "Thor Odinson",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -1084,7 +1084,7 @@
       "speed": "130"
     },
     "biography": {
-      "full-name": "Scott Summers",
+      "fullName": "Scott Summers",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -1108,7 +1108,7 @@
       "speed": "150"
     },
     "biography": {
-      "full-name": "Gwen Stacy",
+      "fullName": "Gwen Stacy",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -1132,7 +1132,7 @@
       "speed": "1200"
     },
     "biography": {
-      "full-name": "Carol Danvers",
+      "fullName": "Carol Danvers",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -1156,7 +1156,7 @@
       "speed": "70"
     },
     "biography": {
-      "full-name": "Natasha Romanoff",
+      "fullName": "Natasha Romanoff",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -1180,7 +1180,7 @@
       "speed": "480"
     },
     "biography": {
-      "full-name": "Stephen Strange",
+      "fullName": "Stephen Strange",
       "publisher": "Marvel Comics",
       "alignment": "good"
     },
@@ -1204,7 +1204,7 @@
       "speed": "55"
     },
     "biography": {
-      "full-name": "Harley Quinn",
+      "fullName": "Harley Quinn",
       "publisher": "DC Comics",
       "alignment": "bad"
     },
@@ -1228,7 +1228,7 @@
       "speed": "55"
     },
     "biography": {
-      "full-name": "Wade Wilson",
+      "fullName": "Wade Wilson",
       "publisher": "Marvel Comics",
       "alignment": "neutral"
     },
@@ -1252,7 +1252,7 @@
       "speed": "380"
     },
     "biography": {
-      "full-name": "Thanos",
+      "fullName": "Thanos",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -1276,7 +1276,7 @@
       "speed": "210"
     },
     "biography": {
-      "full-name": "Mera",
+      "fullName": "Mera",
       "publisher": "DC Comics",
       "alignment": "good"
     },
@@ -1300,7 +1300,7 @@
       "speed": "220"
     },
     "biography": {
-      "full-name": "Hela",
+      "fullName": "Hela",
       "publisher": "Marvel Comics",
       "alignment": "bad"
     },
@@ -1324,7 +1324,7 @@
       "speed": "35"
     },
     "biography": {
-      "full-name": "Rachel Roth",
+      "fullName": "Rachel Roth",
       "publisher": "DC Comics",
       "alignment": "neutral"
     },

@@ -618,15 +618,53 @@ const crearTarjetas = async() => {
   const heroes = await getHeroes();
   heroes.map(heroe =>{
     tarjetas.innerHTML += `
-    <div class="card mt-5 me-4" style="max-width: 380px;">
-      <img src="${heroe.image.url}" class="card-img-top" alt="...">
+    <div class="card text-bg-dark mt-5 me-4" style="max-width: 360px;">
+      <div class="contenedorImagenTarjeta">
+        <img src="${heroe.image.url}" class="card-img-top" alt="imagen ${heroe.name}">
+      </div>
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
+        <h5 class="card-title">${heroe.name}</h5>
+        <div class="row d-flex">
+          <h6 class="text-center">Biography</h6>
+          <div class="col-12">
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Full Name</span><span class="biographyValue">${heroe.biography.fullName}</span>
+            </div>
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Publisher</span><span class="biographyValue">${heroe.biography.publisher}</span>
+            </div>
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Race</span><span class="biographyValue"> ${heroe.appearance.race}</span>
+            </div>
+          </div>
+          <div class="row d-flex px-0">
+          <h6 class="text-center">Stats</h6>
+          <div class="col-6">
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Intelligence</span><span class="statValue">${Math.round(heroe.powerstats.intelligence * 1.6)}</span>
+            </div>
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Strength</span><span class="statValue"> ${heroe.powerstats.strength}</span>
+            </div>
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Speed</span><span class="statValue"> ${heroe.powerstats.speed}</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Height</span><span class="statValue"> ${heroe.appearance.height}</span>
+            </div>
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Weigth</span><span class="statValue"> ${heroe.appearance.weight}</span>
+            </div>
+            <div class="d-flex justify-content-between renglonTarjeta">
+              <span>Alignment</span><span class="statValue"> ${heroe.biography.alignment}</span>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+      <div/>
     </div> 
     `
   })
