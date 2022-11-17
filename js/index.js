@@ -186,8 +186,9 @@ contenedorSelector.classList.add('container-fluid','px-0');
 const crearSelectores = () => {
   contenedorSelector.innerHTML = `
       <div class="row">
-        <div class="col-12 text-center mt-4 mb-4">
-          <h2>Para comenzar el juego selecciona tu facción</h2>
+        <div class="col-12 text-center mt-5 mb-3 tituloSelector">
+          <h1 class="mt-5 mb-5">Juego de cartas Marvel vs DC</h1>
+          <h3>Para comenzar el juego selecciona tu facción</h3>
         </div>
       </div>
       <div class="row d-flex justify-content-center align-items-center">
