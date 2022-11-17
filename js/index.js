@@ -12,6 +12,7 @@ let mazoComputadora = [];
 let cartaComputadora;
 let cantidadRondasIzq = 9;
 let cantidadRondasDer = 9;
+let backgroundVariable = `rgba(55,66,122,1)`;
 
 
 const getHeroes = async() => {
@@ -89,6 +90,8 @@ const crearHtml = () => {
   crearSelectores();
   crearFooter();
 
+  header.style.background = backgroundVariable;
+
   const juego = document.getElementById('juego');
   const cartasHeroes = document.getElementById('cartasHeroes');
   const estadisticas = document.getElementById('stats');
@@ -99,7 +102,7 @@ const crearHtml = () => {
   });
 
   cartasHeroes.addEventListener('click', () => {
-    crearCartas();
+    // crearCartas();
     contenedorSelector.innerHTML = '';
   });
 
@@ -365,7 +368,7 @@ const crearCarta = async(id) => {
       let pixel;
       let pixel2;
       for(let x= 100; x < 200; x = x + 20){
-        for(let y = 100; y < 330; y = y + 20){
+        for(let y = 100; y < 390; y = y + 20){
           contador++;
           pixel = ctx.getImageData(x, y, 1, 1).data;
           pixel2 = pixel.map( i => +i );
@@ -379,8 +382,11 @@ const crearCarta = async(id) => {
       g = Math.round(g/contador);
       b = Math.round(b/contador);
       a = Math.round(a/contador);
-      // contenedor.style.backgroundColor = `rgba(${r},${g},${b},${a})`; 
-      contenedor.style.background = `linear-gradient(to bottom, rgba(${r},${g},${b},${a}) 0%, rgba(255,255,255,1) 100%)`;    
+
+      backgroundVariable = `rgba(${r},${g},${b},${a})`
+      contenedor.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`;    
+      header.style.background = backgroundVariable;
+      footerSitio.style.background = `rgba(255,255,255,1)`;
       })
 
 //rangos 17 8 /300 8 /16 432 / 300 434
@@ -656,4 +662,6 @@ init();
 })();
 
 //TODO usar la funcion reduce para mostrar el acumulado 
-// TODO usar sort para ordenar los heroes por alguna propiedad
+// usar sort para ordenar los heroes por alguna propiedad
+// [...arreglo] operador spread desestructurar
+// usar fechas para las estadisticas para practicarla

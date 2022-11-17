@@ -9,11 +9,11 @@ html, body{
 
 header{
   height: 70px;
-  background-color: rgb(62, 70, 218);
+  /* background-color: rgb(62, 70, 218); */
 }
 
 nav{
-  background-color: rgb(62, 70, 218);
+  /* background-color: rgb(62, 70, 218); */
 }
 
 .nav-link{
@@ -58,7 +58,7 @@ font-size: 1.3rem;
 }
 
 .contenedorPrincipal{
-  background-color: rgb(76, 97, 182);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(55,66,122,1) 100%);
   padding-top: 60px;
   padding-bottom: 0px;
   width: 100%;
@@ -392,8 +392,8 @@ footer{
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: rgb(62, 70, 218);
-  color: #fff;
+  /* background-color: rgb(62, 70, 218); */
+  color: black;
   z-index: 1000;
   padding-top: 0.5rem;
 }
@@ -419,7 +419,7 @@ footer{
 .redes_logos{
   margin-left: 15px;
   font-size: 1.8rem;
-  color:#423304;
+  color:black;
 }
 
 /*end footer*/
