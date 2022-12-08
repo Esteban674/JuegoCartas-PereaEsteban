@@ -13,6 +13,8 @@ let cartaComputadora;
 let cantidadRondasIzq = 9;
 let cantidadRondasDer = 9;
 let backgroundVariable = `rgba(55,66,122,1)`;
+let puntosJugador = 0;
+let puntosComputadora = 0;
 
 
 const getHeroes = async() => {
@@ -399,6 +401,40 @@ const crearCarta = async(id) => {
 //rangos 17 8 /300 8 /16 432 / 300 434
 }
 
+const empate = (heroeJugador, heroeComputadora) => {
+  swal({
+    title: 'Empate!',
+    text: `${heroeJugador.name} empata en esta propiedad con ${heroeComputadora.name}`,
+    icon: 'warning',
+    button: 'Continuar',
+    closeOnClickOutside: false,
+  })
+  puntosJugador += 1;
+  puntosComputadora += 1;
+};
+
+const ganaste = (heroeJugador, heroeComputadora) => {
+  swal({
+    title: 'Ganaste!',
+    text: `${heroeJugador.name} le gana en esta propiedad a ${heroeComputadora.name}`,
+    icon: 'success',
+    button: 'Continuar',
+    closeOnClickOutside: false,
+  })
+  puntosJugador += 3;
+};
+
+const perdiste = (heroeJugador, heroeComputadora) => {
+  swal({
+    title: 'Perdiste!',
+    text: `${heroeJugador.name} pierde en esta propiedad con ${heroeComputadora.name}`,
+    icon: 'error',
+    button: 'Continuar',
+    closeOnClickOutside: false,
+  })
+  puntosComputadora += 3;
+};
+
 const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   cartaComputadora = mazoComputadora.pop()
   crearCartaDerecha(cartaComputadora);
@@ -408,141 +444,51 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   switch (propiedad) {
     case 'height': {
       if(valor === parseInt(heroe.appearance.height)){
-        swal({
-          title: 'Empate!',
-          text: `${heroeJugador.name} tiene la misma altura que ${heroe.name}`,
-          icon: 'warning',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        empate(heroeJugador, heroe);
       }else if(valor > parseInt(heroe.appearance.height)){
-        swal({
-          title: 'Ganaste!',
-          text: `${heroeJugador.name} es más alto/a que ${heroe.name}`,
-          icon: 'success',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        ganaste(heroeJugador, heroe);
       }else{
-        swal({
-          title: 'Perdiste!',
-          text: `${heroeJugador.name} es más bajo/a que ${heroe.name}`,
-          icon: 'error',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        perdiste(heroeJugador, heroe);
       }
       break;
     };
     case 'weight':{
       if(valor === parseInt(heroe.appearance.weight)){
-        swal({
-          title: 'Empate!',
-          text: `${heroeJugador.name} tiene la mismo peso que ${heroe.name}`,
-          icon: 'warning',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        empate(heroeJugador, heroe);
       }else if(valor > parseInt(heroe.appearance.weight)){
-        swal({
-          title: 'Ganaste!',
-          text: `${heroeJugador.name} es más pesado/a que ${heroe.name}`,
-          icon: 'success',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        ganaste(heroeJugador, heroe);
       }else{
-        swal({
-          title: 'Perdiste!',
-          text: `${heroeJugador.name} tiene menos peso que ${heroe.name}`,
-          icon: 'error',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        perdiste(heroeJugador, heroe);
       }
       break;
     };
     case 'intelligence':{
       if(valor === Math.round(parseInt(heroe.powerstats.intelligence * 1.6))){
-        swal({
-          title: 'Empate!',
-          text: `${heroeJugador.name} tiene la misma inteligencia que ${heroe.name}`,
-          icon: 'warning',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        empate(heroeJugador, heroe);
       }else if(valor > Math.round(parseInt(heroe.powerstats.intelligence * 1.6))){
-        swal({
-          title: 'Ganaste!',
-          text: `${heroeJugador.name} es más inteligente que ${heroe.name}`,
-          icon: 'success',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        ganaste(heroeJugador, heroe);
       }else{
-        swal({
-          title: 'Perdiste!',
-          text: `${heroeJugador.name} es menos inteligente que ${heroe.name}`,
-          icon: 'error',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        perdiste(heroeJugador, heroe);
       }
       break;
     };
     case 'strength':{
       if(valor === parseInt(heroe.powerstats.strength)){
-        swal({
-          title: 'Empate!',
-          text: `${heroeJugador.name} tiene la misma fuerza que ${heroe.name}`,
-          icon: 'warning',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        empate(heroeJugador, heroe);
       }else if(valor > parseInt(heroe.powerstats.strength)){
-        swal({
-          title: 'Ganaste!',
-          text: `${heroeJugador.name} es más fuerte que ${heroe.name}`,
-          icon: 'success',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        ganaste(heroeJugador, heroe);
       }else{
-        swal({
-          title: 'Perdiste!',
-          text: `${heroeJugador.name} es menos fuerte que ${heroe.name}`,
-          icon: 'error',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        perdiste(heroeJugador, heroe);
       }
       break;
     };
     case 'speed':{
       if(valor === parseInt(heroe.powerstats.speed)){
-        swal({
-          title: 'Empate!',
-          text: `${heroeJugador.name} tiene la misma velocidad que ${heroe.name}`,
-          icon: 'warning',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        empate(heroeJugador, heroe);
       }else if(valor > parseInt(heroe.powerstats.speed)){
-        swal({
-          title: 'Ganaste!',
-          text: `${heroeJugador.name} es más rápido/a que ${heroe.name}`,
-          icon: 'success',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        ganaste(heroeJugador, heroe);
       }else{
-        swal({
-          title: 'Perdiste!',
-          text: `${heroeJugador.name} es más lento/a que ${heroe.name}`,
-          icon: 'error',
-          button: 'Continuar',
-          closeOnClickOutside: false,
-        })
+        perdiste(heroeJugador, heroe);
       }
       break;
     };
@@ -551,8 +497,12 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
     }
   }
   
+  console.log('Puntos Jugador ' + puntosJugador);
+  console.log('Puntos Computadora ' + puntosComputadora);
+
   const botonConfirmar = document.querySelector('.swal-button--confirm');
   botonConfirmar.addEventListener('click', () => {
+    if(cantidadRondasDer > -1){
     siguienteCarta(heroe.biography.publisher);
 
     dorsoCartaDerecha.innerHTML = '';
@@ -562,7 +512,6 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
       contadorPosicionDer = i + 1;
     };
     cantidadRondasDer--;
-
     dorsoCarta.innerHTML = '';
     contadorPosicionIzq = 0;
     for(let i = 0; i < cantidadRondasIzq; i++){
@@ -570,6 +519,37 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
       contadorPosicionIzq = i + 1;
     };
     cantidadRondasIzq--;
+    }else{
+      console.log('Juego terminado')
+      if(puntosJugador > puntosComputadora){
+        swal({
+          title: 'Ganaste!',
+          text: `Felicitaciones obtuviste ${puntosJugador} puntos!`,
+          icon: 'success',
+          button: 'Finalizar',
+          closeOnClickOutside: false,
+        })
+      }else if(puntosJugador < puntosComputadora){
+        swal({
+          title: 'Perdiste!',
+          text: `Solo obtuviste ${puntosJugador} puntos!`,
+          icon: 'error',
+          button: 'Finalizar',
+          closeOnClickOutside: false,
+        })
+      }else{
+        swal({
+          title: 'Empate!',
+          text: `Felicitaciones obtuviste ${puntosJugador} puntos!`,
+          icon: 'warning',
+          button: 'Finalizar',
+          closeOnClickOutside: false,
+        })
+      }
+      cargarHome();
+      puntosJugador = 0;
+      puntosComputadora = 0;
+    }
   })
 };
 
@@ -578,7 +558,6 @@ const siguienteCarta = (publisher) => {
   carta.innerHTML = '';
   cartaDerecha.innerHTML = '';
   crearCarta(mazoJugador.pop());
-
   crearDorsoCartaOculta(publisher);
 }
 
@@ -676,8 +655,6 @@ const generarMazo = async(publisher) => {
   const mazo = heroesFaction.map(hero => hero.id)
   return _.shuffle(mazo);
 };
-
-
 
 
 const init = () => {
