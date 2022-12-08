@@ -16,6 +16,20 @@ let backgroundVariable = `rgba(55,66,122,1)`;
 let puntosJugador = 0;
 let puntosComputadora = 0;
 
+class Estadistica {
+  static _id = 1;
+  constructor(nombre, puntaje, resultado){
+    this.id = Estadistica._id++;
+    this.nombre = nombre;
+    this.puntaje = puntaje;
+    this.resultado = resultado;
+  }
+}
+
+let estadisticas = [];
+if(localStorage.getItem('estadisticas')){
+  estadisticas = JSON.parse(localStorage.getItem('estadisticas'));
+};
 
 const getHeroes = async() => {
   try {
@@ -72,6 +86,7 @@ const cargarHome = () => {
   dorsoCartaDerecha.innerHTML = '';
   header.style.background = backgroundVariable;
   tarjetas.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`; 
+  contenedorEstadisticas.innerHTML = '';
 } ; 
   
 const crearHtml = () => {
@@ -83,6 +98,7 @@ const crearHtml = () => {
   contenedor.appendChild(contenedorCartaIzq);
   contenedor.appendChild(contenedorCartaDer);
   contenedor.appendChild(contenedorCartasDorsoDer);
+  contenedor.appendChild(contenedorEstadisticas);
   contenedorCartasDorsoIzq.appendChild(dorsoCarta);
   contenedorCartaIzq.appendChild(carta);
   contenedorCartaDer.appendChild(dorsoCartaOculta);
@@ -99,7 +115,7 @@ const crearHtml = () => {
 
   const juego = document.getElementById('juego');
   const cartasHeroes = document.getElementById('cartasHeroes');
-  const estadisticas = document.getElementById('stats');
+  const estadisticasNav = document.getElementById('stats');
   const navbarBrand = document.getElementById('navbarBrand');
 
   juego.addEventListener('click', () => {
@@ -115,6 +131,12 @@ const crearHtml = () => {
   navbarBrand.addEventListener('click', () => {
     cargarHome();
   });
+
+  estadisticasNav.addEventListener('click', () => {
+    cargarHome();
+    contenedorSelector.innerHTML = '';
+    crearEstadisticas(estadisticas);
+  })
 
 }
 
@@ -179,6 +201,39 @@ const crearFooter = () => {
     </div>
   </div>
   `
+}
+
+const contenedorEstadisticas = document.createElement('div');
+contenedorEstadisticas.classList.add('continer-fluid','px-0');
+
+const crearEstadisticas = (estadisticas) => {
+  contenedorEstadisticas.innerHTML = `
+  <div class="container d-flex justify-content-center text-center">
+  <div class="contenedorStats">
+  <h3>Datos de las últimas partidas</h3>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Puntaje</th>
+        <th scope="col">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+        ${estadisticas.map((dato) => 
+        `<tr>
+        <th scope="row">${dato.id}</th>
+        <td>${dato.nombre}</td>
+        <td>${dato.puntaje}</td>
+        <td>${dato.resultado}</td>
+        </tr>`
+        )}
+    </tbody>
+  </table>
+  </div>
+  </div>
+  ` 
 }
 
 
@@ -529,6 +584,8 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
           button: 'Finalizar',
           closeOnClickOutside: false,
         })
+        estadisticas.unshift(new Estadistica('Jugador',`${puntosJugador}`, 'ganador'));
+        localStorage.setItem('estadisticas', JSON.stringify(estadisticas));
       }else if(puntosJugador < puntosComputadora){
         swal({
           title: 'Perdiste!',
@@ -537,6 +594,8 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
           button: 'Finalizar',
           closeOnClickOutside: false,
         })
+        estadisticas.unshift(new Estadistica('Computadora',`${puntosComputadora}`, 'ganador'));
+        localStorage.setItem('estadisticas', JSON.stringify(estadisticas));
       }else{
         swal({
           title: 'Empate!',
@@ -545,6 +604,8 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
           button: 'Finalizar',
           closeOnClickOutside: false,
         })
+        estadisticas.unshift(new Estadistica('Jugador',`${puntosComputadora}`, 'empate'));
+        localStorage.setItem('estadisticas', JSON.stringify(estadisticas));
       }
       cargarHome();
       puntosJugador = 0;

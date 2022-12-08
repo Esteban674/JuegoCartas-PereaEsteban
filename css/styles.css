@@ -20,6 +20,10 @@ nav{
   color: white;
 }
 
+h3{
+  color: white;
+}
+
 .containerLogo{
   width: auto;
   height: 80px;
@@ -469,6 +473,16 @@ flex-wrap: wrap;
 .biographyValue{
   color: orange;
 }
+
+/* Estadisticas */
+
+.contenedorStats{
+  position: relative;
+  width: 500px;
+  justify-content: center;
+  padding-bottom: 250px;
+}
+
 
 /*footer*/
 footer{
