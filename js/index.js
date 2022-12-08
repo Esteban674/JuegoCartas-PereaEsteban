@@ -29,6 +29,7 @@ class Estadistica {
 let estadisticas = [];
 if(localStorage.getItem('estadisticas')){
   estadisticas = JSON.parse(localStorage.getItem('estadisticas'));
+  Estadistica._id = estadisticas.length + 1;
 };
 
 const getHeroes = async() => {
