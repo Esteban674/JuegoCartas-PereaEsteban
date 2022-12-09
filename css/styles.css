@@ -12,6 +12,22 @@ header{
   /* background-color: rgb(62, 70, 218); */
 }
 
+#puntajes{
+  color: #fff;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.puntosJugador{
+  color:rgb(13, 170, 47)
+}
+
+.puntosComputadora{
+  color: orange;
+}
+
 nav{
   /* background-color: rgb(62, 70, 218); */
 }

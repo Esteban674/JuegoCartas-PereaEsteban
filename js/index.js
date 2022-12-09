@@ -90,7 +90,9 @@ const cargarHome = () => {
   header.style.background = backgroundVariable;
   tarjetas.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`; 
   contenedorEstadisticas.innerHTML = '';
-
+  puntosJugador = 0;
+  puntosComputadora = 0;
+  puntajes.innerHTML = '';
 } ; 
   
 const crearHtml = () => {
@@ -156,10 +158,13 @@ const crearHtml = () => {
 //---MenuNav---
 const header = document.getElementById('headerContainer');
 const menuNav = document.createElement('div');
+menuNav.classList.add('col-6');
 header.appendChild(menuNav);
 
+
 const crearMenuNav = () => {
-  menuNav.innerHTML = `<nav class="navbar navbar-expand-lg">
+  menuNav.innerHTML = `
+  <nav class="navbar navbar-expand-lg col-6">
   <div class="container-fluid">
     <a id="navbarBrand" class="navbar-brand" href="#">
       <div class="d-flex align-content-center containerLogo">
@@ -185,7 +190,8 @@ const crearMenuNav = () => {
       </ul>
     </div>
   </div>
-</nav>`
+</nav>
+`
 }
 
 //---Footer---
@@ -488,6 +494,9 @@ const empate = (heroeJugador, heroeComputadora) => {
   })
   puntosJugador += 1;
   puntosComputadora += 1;
+  if(puntosJugador){
+    mostrarPuntajes(puntosJugador, puntosComputadora);
+  }
 };
 //Muestra ganaste
 const ganaste = (heroeJugador, heroeComputadora) => {
@@ -499,6 +508,9 @@ const ganaste = (heroeJugador, heroeComputadora) => {
     closeOnClickOutside: false,
   })
   puntosJugador += 3;
+  if(puntosJugador){
+    mostrarPuntajes(puntosJugador, puntosComputadora);
+  }
 };
 //Muestra perdiste
 const perdiste = (heroeJugador, heroeComputadora) => {
@@ -510,6 +522,9 @@ const perdiste = (heroeJugador, heroeComputadora) => {
     closeOnClickOutside: false,
   })
   puntosComputadora += 3;
+  if(puntosComputadora){
+    mostrarPuntajes(puntosJugador, puntosComputadora);
+  }
 };
 
 //---Funcion para comprara propiedades y determinar ganador de la ronda---
@@ -578,13 +593,13 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   console.log('Puntos Jugador ' + puntosJugador);
   console.log('Puntos Computadora ' + puntosComputadora);
 
-
+  
   //---Confirma y continua con el juego hasta finalizar, luego determina el ganador y lo almacena en el local storage---
   const botonConfirmar = document.querySelector('.swal-button--confirm');
   botonConfirmar.addEventListener('click', () => {
     if(cantidadRondasDer > -1){
     siguienteCarta(heroe.biography.publisher);
-
+    
     dorsoCartaDerecha.innerHTML = '';
     contadorPosicionDer = 0;
     for(let i = 0; i < cantidadRondasDer; i++){
@@ -736,7 +751,19 @@ const crearTarjetas = async() => {
     </div> 
     `
   })
-}
+};
+
+//---Muestra el puntaje durante el juego---
+const puntajes = document.getElementById('puntajes');
+puntajes.classList.add('text-center');
+header.append(puntajes);
+
+
+const mostrarPuntajes = (puntosJugador, puntosComputadora) => {
+  puntajes.innerHTML = `<div>
+    <h5 class="pt-2"><span class="pe-4">Puntos Jugador: <span class="puntosJugador">${puntosJugador}</span></span><span>Puntos Computadora: <span class="puntosComputadora">${puntosComputadora}</span></span></h5>
+  </div>`
+};
 
 //---Funcion para generar el mazo de carta segun sea el publisher---
 const generarMazo = async(publisher) => {
