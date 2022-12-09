@@ -56,7 +56,6 @@ const getHeroesByPublisher = async(publisher) => {
   try {
     const heroes = await getHeroes();
     const heroesByPublisher = heroes.filter(hero => hero.biography.publisher === publisher);
-    console.log(heroesByPublisher);
     return heroesByPublisher;
   } catch (error) {
     throw error;
@@ -297,7 +296,6 @@ const crearSelectores = () => {
     cantidadRondasIzq--;
     crearCarta(mazoJugador.pop());
     generarContrarioMarvel();
-    console.log('DCSelected')
   })
 
   //Selector Marvel Comics
@@ -316,7 +314,6 @@ const crearSelectores = () => {
     cantidadRondasIzq--;
     crearCarta(mazoJugador.pop());
     generarContrarioDC();
-    console.log('MarvelSelected')
   })
 };
 
@@ -429,17 +426,16 @@ const crearCarta = async(id) => {
 
     //Escucha el evento click en cualquier propiedad que sea seleccionada
     propiedades.forEach( propiedad => propiedad.addEventListener('click', ({target}) => {
-      console.log(parseInt(target['value']));
-      console.log((target['name']));
+
       dorsoCartaOculta.innerHTML = '';
       contenedorCartaDer.appendChild(cartaDerecha);
       compararPropiedad(heroe,(target['name']),parseInt(target['value']));
-      console.log(cartaComputadora);
+
     }))
     //Elemento para capturar el evento load de la imagen
     const imagenHeroe = document.querySelector('.imagen');
     imagenHeroe.addEventListener('click', (e) => {
-      console.log(e);
+
     })
     //Establece un color background Variable en funcion de la posicion de una cantidad de puntos de la imagen
     imagenHeroe.addEventListener('load', function (e) {
@@ -448,10 +444,10 @@ const crearCarta = async(id) => {
           this.canvas = document.createElement('canvas');
           this.canvas.width = this.width;
           this.canvas.height = this.height;
-          ctx=this.canvas.getContext('2d');
+          ctx=this.canvas.getContext('2d',{ willReadFrequently: true });
           ctx.drawImage(this, 0, 0, this.width, this.height);
       } else {
-        ctx=this.canvas.getContext('2d');
+        ctx=this.canvas.getContext('2d', { willReadFrequently: true });
       };
       let r = 0,g = 0,b = 0,a = 0;
       let contador = 0;
@@ -532,8 +528,7 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   cartaComputadora = mazoComputadora.pop()
   crearCartaDerecha(cartaComputadora);
   const heroe = await getHeroesById(cartaComputadora);
-  console.log(propiedad)
-  console.log(heroe.appearance.height)
+
   switch (propiedad) {
     case 'height': {
       if(valor === parseInt(heroe.appearance.height)){
@@ -590,9 +585,6 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
     }
   }
   
-  console.log('Puntos Jugador ' + puntosJugador);
-  console.log('Puntos Computadora ' + puntosComputadora);
-
   
   //---Confirma y continua con el juego hasta finalizar, luego determina el ganador y lo almacena en el local storage---
   const botonConfirmar = document.querySelector('.swal-button--confirm');
@@ -615,7 +607,6 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
     };
     cantidadRondasIzq--;
     }else{
-      console.log('Juego terminado')
       if(puntosJugador > puntosComputadora){
         swal({
           title: 'Ganaste!',
@@ -656,7 +647,6 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
 
 //---Funcion que carga la siguiente carta dependiento del publisher
 const siguienteCarta = (publisher) => {
-  console.log('Siguiente Carta');
   carta.innerHTML = '';
   cartaDerecha.innerHTML = '';
   crearCarta(mazoJugador.pop());
