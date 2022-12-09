@@ -1,10 +1,20 @@
 const juegoModulo = (() => {
   'use strict';
 
-//declaraciones
+//---Clases---
+class Estadistica {
+  static _id = 1;
+  constructor(nombre, puntaje, resultado){
+    this.id = Estadistica._id++;
+    this.nombre = nombre;
+    this.puntaje = puntaje;
+    this.resultado = resultado;
+  }
+};
+
+//---Declaraciones---
+//Variables
 const apiUrl = './js/data.json';
-const body = document.body;
-const heroes = [];
 let contadorPosicionIzq = 0;
 let contadorPosicionDer = 0;
 let mazoJugador = [];
@@ -15,23 +25,12 @@ let cantidadRondasDer = 9;
 let backgroundVariable = `rgba(55,66,122,1)`;
 let puntosJugador = 0;
 let puntosComputadora = 0;
-
-class Estadistica {
-  static _id = 1;
-  constructor(nombre, puntaje, resultado){
-    this.id = Estadistica._id++;
-    this.nombre = nombre;
-    this.puntaje = puntaje;
-    this.resultado = resultado;
-  }
-}
-
 let estadisticas = [];
-if(localStorage.getItem('estadisticas')){
-  estadisticas = JSON.parse(localStorage.getItem('estadisticas'));
-  Estadistica._id = estadisticas.length + 1;
-};
 
+
+
+//---Funciones de servicios---
+//Obtener heroes
 const getHeroes = async() => {
   try {
     const response = await fetch(`${apiUrl}`);
@@ -42,7 +41,7 @@ const getHeroes = async() => {
     throw error;
   }
 }
-
+//Obtener heroes por Id
 const getHeroesById = async(id) => {
   try {
     const heroes = await getHeroes();
@@ -52,7 +51,7 @@ const getHeroesById = async(id) => {
     throw error;
   }
 }
-
+//Obtener heroes por publisher
 const getHeroesByPublisher = async(publisher) => {
   try {
     const heroes = await getHeroes();
@@ -63,21 +62,24 @@ const getHeroesByPublisher = async(publisher) => {
     throw error;
   }
 }
-  const main = document.getElementById('main');
-  const contenedor = document.createElement('div');
-  contenedor.classList.add('contenedorPrincipal','row', 'justify-content-center');
-  const contenedorCartasDorsoIzq = document.createElement('div');
-  contenedorCartasDorsoIzq.classList.add('col-3','d-flex','justify-content-start');
-  const contenedorCartaIzq = document.createElement('div');
-  contenedorCartaIzq.classList.add('col-3','d-flex', 'justify-content-end');
-  const contenedorCartaDer = document.createElement('div');
-  contenedorCartaDer.classList.add('col-3');
-  const contenedorCartasDorsoDer = document.createElement('div');
-  contenedorCartasDorsoDer.classList.add('col-3','d-flex', 'justify-content-end');
-  const heroesTarjetas = document.getElementById('heroesLista')
+
+//Manejo del DOM
+const main = document.getElementById('main');
+const contenedor = document.createElement('div');
+contenedor.classList.add('contenedorPrincipal','row', 'justify-content-center');
+const contenedorCartasDorsoIzq = document.createElement('div');
+contenedorCartasDorsoIzq.classList.add('col-3','d-flex','justify-content-start');
+const contenedorCartaIzq = document.createElement('div');
+contenedorCartaIzq.classList.add('col-3','d-flex', 'justify-content-end');
+const contenedorCartaDer = document.createElement('div');
+contenedorCartaDer.classList.add('col-3');
+const contenedorCartasDorsoDer = document.createElement('div');
+contenedorCartasDorsoDer.classList.add('col-3','d-flex', 'justify-content-end');
+const heroesTarjetas = document.getElementById('heroesLista');
 
 
 const cargarHome = () => {
+
   crearSelectores();
   tarjetas.innerHTML = '';
   carta.innerHTML = '';
@@ -88,10 +90,10 @@ const cargarHome = () => {
   header.style.background = backgroundVariable;
   tarjetas.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`; 
   contenedorEstadisticas.innerHTML = '';
+
 } ; 
   
 const crearHtml = () => {
-
 
   main.appendChild(contenedor);
   contenedor.appendChild(contenedorSelector);
@@ -103,46 +105,55 @@ const crearHtml = () => {
   contenedorCartasDorsoIzq.appendChild(dorsoCarta);
   contenedorCartaIzq.appendChild(carta);
   contenedorCartaDer.appendChild(dorsoCartaOculta);
-  // contenedorCartaDer.appendChild(cartaDerecha);
   contenedorCartasDorsoDer.appendChild(dorsoCartaDerecha);
   heroesTarjetas.appendChild(tarjetas);
 
-
+  //Funciones que cargan la pagina principal
   crearMenuNav();
   crearSelectores();
   crearFooter();
 
+  //backgroundVariable aplicado al header
   header.style.background = backgroundVariable;
 
+  //Elementos del MenuNav
   const juego = document.getElementById('juego');
   const cartasHeroes = document.getElementById('cartasHeroes');
   const estadisticasNav = document.getElementById('stats');
   const navbarBrand = document.getElementById('navbarBrand');
 
+  //Comportamiento links del MenuNav
+  //Brand link
+  navbarBrand.addEventListener('click', () => {
+    cargarHome();
+  });
+  //Juego link
   juego.addEventListener('click', () => {
     cargarHome();
   });
-
+  //CartasHeroes link
   cartasHeroes.addEventListener('click', () => {
     cargarHome();
     crearTarjetas();
     contenedorSelector.innerHTML = '';
   });
-
-  navbarBrand.addEventListener('click', () => {
-    cargarHome();
-  });
-
+  //Estadísticas link
   estadisticasNav.addEventListener('click', () => {
     cargarHome();
     contenedorSelector.innerHTML = '';
     crearEstadisticas(estadisticas);
   })
 
+  //Carga la estadisticas desde el storage
+  if(localStorage.getItem('estadisticas')){
+    estadisticas = JSON.parse(localStorage.getItem('estadisticas'));
+    Estadistica._id = estadisticas.length + 1;
+  };
+
 }
 
 
-
+//---MenuNav---
 const header = document.getElementById('headerContainer');
 const menuNav = document.createElement('div');
 header.appendChild(menuNav);
@@ -177,6 +188,7 @@ const crearMenuNav = () => {
 </nav>`
 }
 
+//---Footer---
 const footerSitio = document.getElementById('footerSitio');
 const footer= document.createElement('div');
 footerSitio.appendChild(footer);
@@ -202,8 +214,9 @@ const crearFooter = () => {
     </div>
   </div>
   `
-}
+};
 
+//---Estadistiscas---
 const contenedorEstadisticas = document.createElement('div');
 contenedorEstadisticas.classList.add('continer-fluid','px-0');
 
@@ -235,9 +248,9 @@ const crearEstadisticas = (estadisticas) => {
   </div>
   </div>
   ` 
-}
+};
 
-
+//---Selectores---
 const contenedorSelector = document.createElement('div');
 contenedorSelector.classList.add('container-fluid','px-0');
 
@@ -260,7 +273,9 @@ const crearSelectores = () => {
           <img id="imgMarvelSelector" class="img-fluid" src="./img/MarvelSelector2.jpg" alt="Logo Marvel Comics">
         </div>
       </div>
-  `
+  `;
+
+  //Selector DC Comics
   const dcSelected = document.getElementById('DCSelector');
   dcSelected.addEventListener('click', async() => {
     cantidadRondasIzq = 9;
@@ -279,6 +294,7 @@ const crearSelectores = () => {
     console.log('DCSelected')
   })
 
+  //Selector Marvel Comics
   const marvelSelected = document.getElementById('MarvelSelector');
   marvelSelected.addEventListener('click', async() => {
     cantidadRondasIzq = 9;
@@ -296,8 +312,9 @@ const crearSelectores = () => {
     generarContrarioDC();
     console.log('MarvelSelected')
   })
-}
+};
 
+//Funcion Generar mazo y cartas Contrario Marvel Comics
 const generarContrarioMarvel = async() => {
   contadorPosicionDer = 0;
   const publisher = 'Marvel Comics'; 
@@ -309,8 +326,9 @@ const generarContrarioMarvel = async() => {
   cantidadRondasDer--;
   cartaComputadora = mazoComputadora.pop()
   crearDorsoCartaOculta(publisher);
-}
+};
 
+//Funcion Generar mazo y cartas Contrario DC Comics
 const generarContrarioDC = async() => {
   contadorPosicionDer = 0;
   const publisher = 'DC Comics'; 
@@ -324,10 +342,9 @@ const generarContrarioDC = async() => {
   crearDorsoCartaOculta(publisher);
 }
 
-
+//---Cartas---(DOM)
 const tarjetas = document.createElement('div');
 tarjetas.classList.add('contenedorTarjetas','justify-content-center');
-
 
 const carta = document.createElement('div');
 carta.classList.add('contenedorCartas','justify-content-center');
@@ -344,6 +361,8 @@ dorsoCartaDerecha.classList.add('contenedorCartas','justify-content-center');
 const dorsoCartaOculta = document.createElement('div');
 dorsoCartaOculta.classList.add('contenedorCartas','justify-content-center');
 
+//---Funciones Crear Cartas---
+//Crea dorso carta izquierda
 const crearDorsoCartaIzquierda = (publisher) => {
   dorsoCarta.innerHTML += `
         <div class="dorsoCarta positionIzq${contadorPosicionIzq}">
@@ -351,7 +370,7 @@ const crearDorsoCartaIzquierda = (publisher) => {
         </div>
   `
 };
-
+//Crea dorso carta derecha
 const crearDorsoCartaDerecha = (publisher) => {
   dorsoCartaDerecha.innerHTML += `
         <div class="dorsoCarta positionDer${contadorPosicionDer}"">
@@ -359,7 +378,7 @@ const crearDorsoCartaDerecha = (publisher) => {
         </div>
   `
 };
-
+//Crea dorso carta oculta
 const crearDorsoCartaOculta = (publisher) => {
   dorsoCartaOculta.innerHTML = `
         <div class="dorsoCarta dorsoCartaOculta">
@@ -367,7 +386,7 @@ const crearDorsoCartaOculta = (publisher) => {
         </div>
   `
 };
-
+//Crea carta visible
 const crearCarta = async(id) => {
   const heroe = await getHeroesById(id);
     carta.innerHTML += `
@@ -398,24 +417,25 @@ const crearCarta = async(id) => {
         </div>
         </div>
         
-    `
+    `;
+    //Variable propiedad para evaluar
     const propiedades = document.querySelectorAll('.valorPropiedad');
 
+    //Escucha el evento click en cualquier propiedad que sea seleccionada
     propiedades.forEach( propiedad => propiedad.addEventListener('click', ({target}) => {
       console.log(parseInt(target['value']));
       console.log((target['name']));
       dorsoCartaOculta.innerHTML = '';
       contenedorCartaDer.appendChild(cartaDerecha);
-      // contenedorCartaDer.classList.add('col-3','d-flex','justify-content-start');
       compararPropiedad(heroe,(target['name']),parseInt(target['value']));
       console.log(cartaComputadora);
     }))
-
+    //Elemento para capturar el evento load de la imagen
     const imagenHeroe = document.querySelector('.imagen');
     imagenHeroe.addEventListener('click', (e) => {
       console.log(e);
     })
-
+    //Establece un color background Variable en funcion de la posicion de una cantidad de puntos de la imagen
     imagenHeroe.addEventListener('load', function (e) {
       let ctx;
       if(!this.canvas) {
@@ -426,11 +446,12 @@ const crearCarta = async(id) => {
           ctx.drawImage(this, 0, 0, this.width, this.height);
       } else {
         ctx=this.canvas.getContext('2d');
-      }
+      };
       let r = 0,g = 0,b = 0,a = 0;
       let contador = 0;
       let pixel;
       let pixel2;
+      //rangos de la imagen 17 8 /300 8 /16 432 / 300 434
       for(let x= 100; x < 200; x = x + 20){
         for(let y = 100; y < 390; y = y + 20){
           contador++;
@@ -452,11 +473,11 @@ const crearCarta = async(id) => {
       header.style.background = backgroundVariable;
       tarjetas.style.background = `linear-gradient(to bottom, ${backgroundVariable} 0%, rgba(255,255,255,1) 100%)`;   
       footerSitio.style.background = `rgba(255,255,255,1)`;
-      })
-
-//rangos 17 8 /300 8 /16 432 / 300 434
+      });
 }
 
+//---Funciones que muestran el resultado del juego
+//Muestra empate
 const empate = (heroeJugador, heroeComputadora) => {
   swal({
     title: 'Empate!',
@@ -468,7 +489,7 @@ const empate = (heroeJugador, heroeComputadora) => {
   puntosJugador += 1;
   puntosComputadora += 1;
 };
-
+//Muestra ganaste
 const ganaste = (heroeJugador, heroeComputadora) => {
   swal({
     title: 'Ganaste!',
@@ -479,7 +500,7 @@ const ganaste = (heroeJugador, heroeComputadora) => {
   })
   puntosJugador += 3;
 };
-
+//Muestra perdiste
 const perdiste = (heroeJugador, heroeComputadora) => {
   swal({
     title: 'Perdiste!',
@@ -491,6 +512,7 @@ const perdiste = (heroeJugador, heroeComputadora) => {
   puntosComputadora += 3;
 };
 
+//---Funcion para comprara propiedades y determinar ganador de la ronda---
 const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   cartaComputadora = mazoComputadora.pop()
   crearCartaDerecha(cartaComputadora);
@@ -556,6 +578,8 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   console.log('Puntos Jugador ' + puntosJugador);
   console.log('Puntos Computadora ' + puntosComputadora);
 
+
+  //---Confirma y continua con el juego hasta finalizar, luego determina el ganador y lo almacena en el local storage---
   const botonConfirmar = document.querySelector('.swal-button--confirm');
   botonConfirmar.addEventListener('click', () => {
     if(cantidadRondasDer > -1){
@@ -615,6 +639,7 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   })
 };
 
+//---Funcion que carga la siguiente carta dependiento del publisher
 const siguienteCarta = (publisher) => {
   console.log('Siguiente Carta');
   carta.innerHTML = '';
@@ -623,7 +648,7 @@ const siguienteCarta = (publisher) => {
   crearDorsoCartaOculta(publisher);
 }
 
-
+//---Crea la carta del lado derecho (Computadora)---
 const crearCartaDerecha = async(id) => {
   const heroe = await getHeroesById(id);
     cartaDerecha.innerHTML += `
@@ -656,6 +681,7 @@ const crearCartaDerecha = async(id) => {
     `
 };
 
+//---Crea las tarjetas de heroes en donde se muestran todos los heroes que estan en las cartas
 const crearTarjetas = async() => {
   const heroes = await getHeroes();
   heroes.map(heroe =>{
@@ -712,13 +738,15 @@ const crearTarjetas = async() => {
   })
 }
 
+//---Funcion para generar el mazo de carta segun sea el publisher---
 const generarMazo = async(publisher) => {
   const heroesFaction = await getHeroesByPublisher(publisher);
   const mazo = heroesFaction.map(hero => hero.id)
+  //se utiliza una libreria externa que devuelve el mazo mezclado
   return _.shuffle(mazo);
 };
 
-
+//---Carga inical de la aplicacion---
 const init = () => {
 
   crearHtml();
