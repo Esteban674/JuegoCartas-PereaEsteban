@@ -27,7 +27,13 @@ let puntosJugador = 0;
 let puntosComputadora = 0;
 let estadisticas = [];
 
-
+const TraductorPropiedad = {
+  height: "altura",
+  weight: "peso",
+  intelligence: "inteligencia",
+  strength: "fuerza",
+  speed: "velocidad"
+}
 
 //---Funciones de servicios---
 //Obtener heroes
@@ -480,10 +486,10 @@ const crearCarta = async(id) => {
 
 //---Funciones que muestran el resultado del juego
 //Muestra empate
-const empate = (heroeJugador, heroeComputadora) => {
+const empate = (heroeJugador, heroeComputadora, propiedad) => {
   swal({
     title: 'Empate!',
-    text: `${heroeJugador.name} empata en esta propiedad con ${heroeComputadora.name}`,
+    text: `${heroeJugador.name} empata en ${TraductorPropiedad[propiedad]} con ${heroeComputadora.name}`,
     icon: 'warning',
     button: 'Continuar',
     closeOnClickOutside: false,
@@ -495,10 +501,10 @@ const empate = (heroeJugador, heroeComputadora) => {
   }
 };
 //Muestra ganaste
-const ganaste = (heroeJugador, heroeComputadora) => {
+const ganaste = (heroeJugador, heroeComputadora, propiedad) => {
   swal({
     title: 'Ganaste!',
-    text: `${heroeJugador.name} le gana en esta propiedad a ${heroeComputadora.name}`,
+    text: `${heroeJugador.name} le gana en ${TraductorPropiedad[propiedad]} a ${heroeComputadora.name}`,
     icon: 'success',
     button: 'Continuar',
     closeOnClickOutside: false,
@@ -509,10 +515,10 @@ const ganaste = (heroeJugador, heroeComputadora) => {
   }
 };
 //Muestra perdiste
-const perdiste = (heroeJugador, heroeComputadora) => {
+const perdiste = (heroeJugador, heroeComputadora, propiedad) => {
   swal({
     title: 'Perdiste!',
-    text: `${heroeJugador.name} pierde en esta propiedad con ${heroeComputadora.name}`,
+    text: `${heroeJugador.name} pierde en ${TraductorPropiedad[propiedad]} con ${heroeComputadora.name}`,
     icon: 'error',
     button: 'Continuar',
     closeOnClickOutside: false,
@@ -523,7 +529,7 @@ const perdiste = (heroeJugador, heroeComputadora) => {
   }
 };
 
-//---Funcion para comprara propiedades y determinar ganador de la ronda---
+//---Funcion para comprarar propiedades y determinar ganador de la ronda---
 const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   cartaComputadora = mazoComputadora.pop()
   crearCartaDerecha(cartaComputadora);
@@ -532,51 +538,51 @@ const compararPropiedad = async(heroeJugador,propiedad,valor) => {
   switch (propiedad) {
     case 'height': {
       if(valor === parseInt(heroe.appearance.height)){
-        empate(heroeJugador, heroe);
+        empate(heroeJugador, heroe, propiedad);
       }else if(valor > parseInt(heroe.appearance.height)){
-        ganaste(heroeJugador, heroe);
+        ganaste(heroeJugador, heroe, propiedad);
       }else{
-        perdiste(heroeJugador, heroe);
+        perdiste(heroeJugador, heroe, propiedad);
       }
       break;
     };
     case 'weight':{
       if(valor === parseInt(heroe.appearance.weight)){
-        empate(heroeJugador, heroe);
+        empate(heroeJugador, heroe, propiedad);
       }else if(valor > parseInt(heroe.appearance.weight)){
-        ganaste(heroeJugador, heroe);
+        ganaste(heroeJugador, heroe, propiedad);
       }else{
-        perdiste(heroeJugador, heroe);
+        perdiste(heroeJugador, heroe, propiedad);
       }
       break;
     };
     case 'intelligence':{
       if(valor === Math.round(parseInt(heroe.powerstats.intelligence * 1.6))){
-        empate(heroeJugador, heroe);
+        empate(heroeJugador, heroe, propiedad);
       }else if(valor > Math.round(parseInt(heroe.powerstats.intelligence * 1.6))){
-        ganaste(heroeJugador, heroe);
+        ganaste(heroeJugador, heroe, propiedad);
       }else{
-        perdiste(heroeJugador, heroe);
+        perdiste(heroeJugador, heroe, propiedad);
       }
       break;
     };
     case 'strength':{
       if(valor === parseInt(heroe.powerstats.strength)){
-        empate(heroeJugador, heroe);
+        empate(heroeJugador, heroe, propiedad);
       }else if(valor > parseInt(heroe.powerstats.strength)){
-        ganaste(heroeJugador, heroe);
+        ganaste(heroeJugador, heroe, propiedad);
       }else{
-        perdiste(heroeJugador, heroe);
+        perdiste(heroeJugador, heroe, propiedad);
       }
       break;
     };
     case 'speed':{
       if(valor === parseInt(heroe.powerstats.speed)){
-        empate(heroeJugador, heroe);
+        empate(heroeJugador, heroe, propiedad);
       }else if(valor > parseInt(heroe.powerstats.speed)){
-        ganaste(heroeJugador, heroe);
+        ganaste(heroeJugador, heroe, propiedad);
       }else{
-        perdiste(heroeJugador, heroe);
+        perdiste(heroeJugador, heroe, propiedad);
       }
       break;
     };
@@ -774,7 +780,3 @@ init();
 
 })();
 
-//TODO usar la funcion reduce para mostrar el acumulado 
-// usar sort para ordenar los heroes por alguna propiedad
-// [...arreglo] operador spread desestructurar
-// usar fechas para las estadisticas para practicarla
