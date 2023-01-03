@@ -757,7 +757,7 @@ header.append(puntajes);
 
 const mostrarPuntajes = (puntosJugador, puntosComputadora) => {
   puntajes.innerHTML = `<div>
-    <h5 class="pt-2"><span class="pe-4">Puntos Jugador: <span class="puntosJugador">${puntosJugador}</span></span><span>Puntos Computadora: <span class="puntosComputadora">${puntosComputadora}</span></span></h5>
+    <h6 class="pt-2"><span class="pe-4">Puntos Jugador: <span class="puntosJugador">${puntosJugador}</span></span><span>Puntos Computadora: <span class="puntosComputadora">${puntosComputadora}</span></span></h6>
   </div>`
 };
 

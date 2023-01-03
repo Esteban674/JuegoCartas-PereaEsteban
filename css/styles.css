@@ -12,6 +12,11 @@ header{
   /* background-color: rgb(62, 70, 218); */
 }
 
+/* @media (max-width: 993px) {
+  header {
+    margin-bottom: 7rem; 
+} } */
+
 #puntajes{
   color: #fff;
   display:flex;
@@ -47,8 +52,9 @@ h3{
 .containerLogo{
   width: auto;
   height: 80px;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-top: 3px;
+  /* margin-left: 10px;
+  margin-right: 20px; */
 }
 
 .dcLogo{
@@ -87,7 +93,6 @@ font-size: 1.3rem;
   width: 100%;
   display: flex;
   justify-content:center;
-
 }
 .contenedorCartas{
   min-width: 330px;
@@ -310,6 +315,12 @@ font-size: 1.3rem;
   width: 150px;
 }
 
+@media (max-width: 867px) {
+  #vsSelector {
+    margin-left: 15rem; 
+    margin-right: 15rem;
+  } }
+
 #imgVsSelector{
   width: 100px;
   min-width: 100px;
@@ -515,6 +526,16 @@ footer{
   z-index: 1000;
   padding-top: 0.5rem;
 }
+
+@media (max-width: 867px) {
+  footer {
+    margin-top: 5rem; 
+  } }
+
+@media (max-width: 530px) {
+    footer {
+      margin-top: 7rem; 
+  } }
 
 .footer__copyright{
   padding-top: 0.5rem;
